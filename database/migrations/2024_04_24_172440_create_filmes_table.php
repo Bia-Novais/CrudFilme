@@ -19,9 +19,12 @@ return new class extends Migration
             $table->string("subtitulo");
             $table->string("anolanc");
             $table->string("duracao");
+            $table->string("classi");
+            $table->string("genero");
             $table->string("pontuacao");
             $table->string("diretor");
             $table->string("resumo");
+            $table->string("capa");
             $table->timestamps();
         });
     }

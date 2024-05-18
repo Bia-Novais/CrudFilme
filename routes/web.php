@@ -7,15 +7,14 @@ use App\Http\Controllers\filmesController;
 #Route::get('/', [\App\Http\Controllers\ContatoController::class, 'index']);
 
 // Home page route
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/', [filmesController::class, 'listar']);
+Route::get("/", [filmesController::class, 'index']);
+
+Route::get("/listar", [filmesController::class, 'listar']);
 
 Route::get("/cadastrar", [filmesController::class, "cadastrar"]);
 
 Route::get('/atualizar', function () {
-    return view('atualizacao');
+    return view('atualizar');
 });
 
 Route::get('/deletar', function () {

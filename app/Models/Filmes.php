@@ -13,8 +13,19 @@ class Filmes extends Model
         "subtitulo",
         "anolanc",
         "duracao",
+        "classi",
+        "genero",
         "pontuacao",
         "diretor",
-        "resumo"
+        "resumo",
+        "capa"
         ];
+
+        public function getCapaUrlAttribute(){
+            if($this->capa){
+                //Asset usado em laravel para armazernar uma url dentro de uma pasta
+                return asset('storage/' . $this->capa);
+            }
+            return null;
+        }
 }
